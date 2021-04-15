@@ -1,6 +1,8 @@
 <h3>Experiments</h3>
 <ul>
-  <li>Mars soil sample</li>
-  <li>Plant growth in habitat</li>
-  <li>Human bone density</li>
+  <li *ngFor="let experiment of plannedExperiments">{{experiment}}</li>
 </ul>
+
+<input #name type="text"/>
+<!-- <label>First mission<input #firstMission type="checkbox"/></label> -->
+<button (click)="add(name.value, firstMission.checked)">Add</button>
